@@ -78,8 +78,59 @@ function media(numberA, numberB, numerC) {
 const result = media(5, 7, 9);
 console.log(result);
 
-function discount(numberA, numerB){
-const discount = numberA - numberB;
-return discount;
+function discount(discount, price) {
+  const result = price - (price * discount) / 100;
+  return result;
 }
-const
+const discountResult = discount(50, 200);
+console.log(discountResult);
+
+function twoWords(wordA, wordB) {
+  const wordsResult = wordA + '-' + wordB;
+  return wordsResult;
+}
+const wordsResult = twoWords('hola', 'cesar');
+console.log(wordsResult);
+
+function kilometersTometers(km) {
+  const meters = km * 1000;
+  return meters;
+}
+const meters = kilometersTometers(1);
+console.log(meters);
+
+function hourToseconds(hour) {
+  const seconds = hour * 3600;
+  return seconds;
+}
+const seconds = hourToseconds(2);
+console.log(seconds);
+
+function kmhToMetersPerSeconds(speed) {
+  const meters = kilometersTometers(speed);
+  const seconds = hourToseconds(1);
+  return meters / seconds;
+}
+const convertedSpeed = kmhToMetersPerSeconds(110);
+console.log(convertedSpeed + ' m/s');
+
+console.clear();
+
+const getMeters = kilometers => kilometers * 1000;
+const totalMeters = getMeters(160);
+console.log(totalMeters);
+
+const media2 = (numberA, numberB, numberC) => (numberA + numberB + numberC) / 3;
+const average = media2(2, 6, 9);
+console.log(average);
+
+const isAdult = (nameA, age) => {
+  if (age <= 18) {
+    console.log('Hola ' + nameA + ' , eres mayor de edad');
+  } else {
+    console.log('Hola ' + nameA + ' , eres menor de edad');
+  }
+};
+isAdult('Oscar', 23);
+
+const discount2=
